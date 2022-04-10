@@ -2,25 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
-  selector: 'app-quotes',
-  templateUrl: './quotes.component.html',
-  styleUrls: ['./quotes.component.css']
+  selector: 'app-quote',
+  templateUrl: './quote.component.html',
+  styleUrls: ['./quote.component.css']
 })
-export class QuotesComponent implements OnInit {
+export class QuoteComponent implements OnInit {
 
-  quotes: Quote[] = [
+  quotes:Quote[] = [
     new Quote(
-      1,
-      'Lloyd Warui',
-      'Pat Naina',
-      'Without chaos there is no change',
-      new Date(2022, 1, 1)),
+    1,
+    'Lloyd Warui',
+    'Pat Naina',
+    'Without chaos there is no change',
+    new Date(2022,1,1)),
   ]
   goals: any;
 
 
   //add new quote
-  addNewQuote(quote: any) {
+  addNewQuote(quote:any) {
     this.quotes.push(
       new Quote(
         quote.id,
@@ -37,21 +37,21 @@ export class QuotesComponent implements OnInit {
   }
 
   //delete a quote
-  deleteQuote(deleteQuoteEvent: any, index: number) {
-    if (deleteQuoteEvent) {
-      this.quotes.splice(index, 1);
+  deleteQuote(deleteQuoteEvent: any,index: number) {
+    if(deleteQuoteEvent) {
+      this.quotes.splice(index,1);
     }
   }
 
   //upvote a quote
-  upVoteQuote(upVoteQuoteEvent: any, index: number) {
-    if (upVoteQuoteEvent) {
+  upVoteQuote(upVoteQuoteEvent: any,index:number) {
+    if(upVoteQuoteEvent) {
       this.quotes[index].likes++;
     }
   }
-
+  
   //downvote a quote
-  downVoteQuote(downVoteQuoteEvent: any, index: number) {
+  downVoteQuote(downVoteQuoteEvent:any,index:number) {
     if (downVoteQuoteEvent) {
       this.quotes[index].dislikes++;
     }
@@ -67,7 +67,6 @@ export class QuotesComponent implements OnInit {
     }
     return quoteWithHighestLikes;
   }
-
 
   constructor() { }
 
