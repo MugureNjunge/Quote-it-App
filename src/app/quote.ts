@@ -9,6 +9,6 @@ export class Quote {
     public likes: number = 0,
     public dislikes: number = 0
   ) {
-    this.showVotes = false;
+    // this.showVotes = false;
   }
 }
