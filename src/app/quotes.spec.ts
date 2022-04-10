@@ -1,4 +1,4 @@
-import { Quote } from './quote';
+import { Quote } from './quotes';
 
 describe('Quote', () => {
   it('should create an instance', () => {
