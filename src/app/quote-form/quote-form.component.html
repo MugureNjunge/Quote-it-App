@@ -18,13 +18,13 @@
         
         <div class="form-group">
             <label for="quote"></label>
-            <textarea  class="form-control" id="quote" rows="6"  [(ngModel)]="newQuote.statement" name="statement" #statement="ngModel" placeholder="Enter quote.." required></textarea>
+            <textarea  class="form-control" id="quote" rows="4"  [(ngModel)]="newQuote.statement" name="statement" #statement="ngModel" placeholder="Enter quote.." required></textarea>
             <div [hidden]="statement.valid || statement.pristine" class="alert alert-danger">
                 <p>Fill in the Quote!</p>
             </div>
         </div>
         <br>
-        <button type="submit" class="btn btn-warning" id="form-button">Add</button>
+        <button type="submit" class="btn btn-warning mb-3" id="form-button">Create</button><br>
     </form>       
 </div>
 

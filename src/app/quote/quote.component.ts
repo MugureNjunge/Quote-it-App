@@ -19,7 +19,7 @@ export class QuoteComponent implements OnInit {
   goals: any;
 
 
-  //add new quote
+  //add quote
   addNewQuote(quote:any) {
     this.quotes.push(
       new Quote(
@@ -31,42 +31,42 @@ export class QuoteComponent implements OnInit {
       )
     );
   }
-  //toggle details
+  //toggle
   toggleDetails(index: number) {
     this.quotes[index].showVotes = !this.quotes[index].showVotes;
   }
 
-  //delete a quote
+  //delete
   deleteQuote(deleteQuoteEvent: any,index: number) {
     if(deleteQuoteEvent) {
       this.quotes.splice(index,1);
     }
   }
 
-  //upvote a quote
+  //upvote
   upVoteQuote(upVoteQuoteEvent: any,index:number) {
     if(upVoteQuoteEvent) {
       this.quotes[index].likes++;
     }
   }
   
-  //downvote a quote
+  //downvote
   downVoteQuote(downVoteQuoteEvent:any,index:number) {
     if (downVoteQuoteEvent) {
-      this.quotes[index].dislikes++;
+      this.quotes[index].likes++;
     }
   }
 
-  // getting the quote with the highest likes from the array
-  getQuoteWithHighestLikes() {
-    let quoteWithHighestLikes = this.quotes[0];
-    for (let i = 0; i < this.quotes.length; i++) {
-      if (this.quotes[i].likes > quoteWithHighestLikes.likes) {
-        quoteWithHighestLikes = this.quotes[i];
-      }
-    }
-    return quoteWithHighestLikes;
-  }
+  // highest number
+  // getQuoteWithHighestLikes() {
+  //   let quoteWithHighestLikes = this.quotes[0];
+  //   for (let i = 0; i < this.quotes.length; i++) {
+  //     if (this.quotes[i].likes > quoteWithHighestLikes.likes) {
+  //       quoteWithHighestLikes = this.quotes[i];
+  //     }
+  //   }
+  //   return quoteWithHighestLikes;
+  // }
 
   constructor() { }
 
