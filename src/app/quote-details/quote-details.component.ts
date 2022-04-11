@@ -1,12 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Quote } from '../quotes';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../quotes'; 
 
 @Component({
-  selector: 'app-quote-details',
-  templateUrl: './quote-details.component.html',
-  styleUrls: ['./quote-details.component.css']
+  selector: 'app-quote-detail',
+  templateUrl: './quote-detail.component.html',
+  styleUrls: ['./quote-detail.component.css']
 })
-export class QuoteDetailsComponent implements OnInit {
+export class QuoteDetailsComponent
+implements OnInit {
 
   //input property binding
   @Input()quote!: Quote;
@@ -33,7 +34,6 @@ export class QuoteDetailsComponent implements OnInit {
   downVoteQuote(quote:Quote) {
     this.downVoteQuoteEvent.emit(quote);
   }
-
   constructor() { }
 
   ngOnInit(): void {

@@ -3,8 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'dayCount'
 })
-export class DayCountPipe 
-implements PipeTransform {
+export class DayCountPipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): number {
     let today: Date = new Date();
@@ -23,5 +22,4 @@ implements PipeTransform {
       return 0;
     }
   }
-
 }

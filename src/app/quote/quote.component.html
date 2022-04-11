@@ -1,5 +1,5 @@
 <div class="quote-body">
-  <h1>QuoteIt- Let us play around with quotes</h1>
+
   <div class="quotes" *ngFor='let quote of quotes;let i = index'>
     <p>{{quote.statement}}</p>
     <button (click)='toggleDetails(i)' class="btn btn-warning">See More <i class="fas fa-arrow-down"></i></button>
@@ -7,7 +7,8 @@
       (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteQuote)="downVoteQuote($event,i)"></app-quote-details>
   </div>
 
-
-  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  <div>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
 
 </div>
