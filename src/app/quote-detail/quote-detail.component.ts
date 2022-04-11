@@ -6,20 +6,18 @@ import { Quote } from '../quotes';
   templateUrl: './quote-detail.component.html',
   styleUrls: ['./quote-detail.component.css']
 })
-export class QuoteDetailsComponent
+export class QuoteDetailComponent
 implements OnInit {
 
-  //input property binding
+  
   @Input()quote!: Quote;
 
-  //event emitters
-  //delete event emitter
   @Output() deleteQuoteEvent = new EventEmitter<Quote>();
 
-  //upvote event emitter
+ 
   @Output() upVoteQuoteEvent = new EventEmitter<Quote>();
 
-  //downvote event emitter
+  
   @Output() downVoteQuoteEvent = new EventEmitter<Quote>();
 
 
@@ -40,3 +38,5 @@ implements OnInit {
   }
 
 }
+
+
